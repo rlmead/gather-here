@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
-import { Atkinson_Hyperlegible } from "next/font/google";
-import "./globals.css";
-
-const a_h = Atkinson_Hyperlegible({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-});
+import { atkinson_hyperlegible } from "./ui/fonts";
+import "./ui/globals.css";
 
 export const metadata: Metadata = {
   title: "gather here.",
@@ -20,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={a_h.className}>{children}</body>
+      <body className={atkinson_hyperlegible.className}>{children}</body>
     </html>
   );
 }
