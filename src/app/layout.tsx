@@ -1,22 +1,25 @@
-import type { Metadata } from 'next'
-import { Atkinson_Hyperlegible } from 'next/font/google'
-import './globals.css'
-
-const a_h = Atkinson_Hyperlegible({ weight: ['400', '700'], subsets: ['latin'] })
+import type { Metadata } from "next";
+import { atkinson_hyperlegible } from "./ui/fonts";
+import Nav from "./ui/navbar";
+import "./ui/globals.css";
 
 export const metadata: Metadata = {
-  title: 'gather here.',
-  description: 'A social network for forming local friendship groups based on mutual interests',
-}
+  title: "gather here.",
+  description:
+    "A social network for forming local friendship groups based on shared interests",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={a_h.className}>{children}</body>
+      <body className={atkinson_hyperlegible.className}>
+        <Nav />
+        {children}
+      </body>
     </html>
-  )
+  );
 }
