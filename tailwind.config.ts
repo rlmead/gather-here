@@ -19,16 +19,28 @@ const config: Config = {
     }
   },
   daisyui: {
+    darkTheme: "customDark",
     themes: [
       {
-        mytheme: {
+        customLight: {
           "primary": "#7C274B",
-          "secondary": "#29A39F",
+          "secondary": "#FFFFFF",
           "accent": "#FBB13C",
-          "neutral": "#FFFAFA",
+          "neutral": "#FFFFFF",
           "base-100": "#FFFFFF",
           "info": "#73D2DE",
-          "success": "#218255",
+          "success": "#29A39F",
+          "warning": "#D81159",
+          "error": "#000000",
+        },
+        customDark: {
+          "primary": "#FFFFFF",
+          "secondary": "#7C274B",
+          "accent": "#FBB13C",
+          "neutral": "#FFFFFF",
+          "base-100": "#FFFFFF",
+          "info": "#73D2DE",
+          "success": "#29A39F",
           "warning": "#D81159",
           "error": "#000000",
         },
