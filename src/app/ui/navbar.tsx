@@ -14,7 +14,7 @@ export default function Nav() {
               <summary>
                 More Info
               </summary>
-              <ul className="p-2 bg-base-100 rounded-t-none bg-secondary">
+              <ul className="p-2 bg-base-100 rounded-t-none">
                 <li><Link href="/about">About</Link></li>
                 <li><Link href="/join">Join a Group</Link></li>
               </ul>
