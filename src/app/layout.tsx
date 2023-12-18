@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { atkinson_hyperlegible } from "./ui/fonts";
-import Nav from "./ui/navbar";
+import Navbar from "./ui/navbar";
 import Footer from "./ui/footer";
 import "./ui/globals.css";
 
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={atkinson_hyperlegible.className}>
-        <Nav />
+        <Navbar />
         {children}
         <Footer />
       </body>
