@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center mx-auto text-primary bg-secondary">
+    <main className="flex min-h-full flex-col items-center mx-auto text-primary bg-secondary">
       <div className="container flex flex-col content-center">
         <h1 className="text-7xl text-center mt-8">gather here.</h1>
         <p className="text-2xl text-center p-5">a social network for forming local friendship groups based on shared interests</p>
