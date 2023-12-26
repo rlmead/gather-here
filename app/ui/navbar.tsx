@@ -8,7 +8,7 @@ export default function Navbar() {
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1 bg-secondary">
-          <li><Link href="/auth">Sign In</Link></li>
+          <li><Link href="/auth">Log In</Link></li>
           <li>
             <details>
               <summary>

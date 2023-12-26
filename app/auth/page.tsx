@@ -1,9 +1,15 @@
-export default function Page() {
+import Auth from './auth';
+import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
+import { cookies } from 'next/headers';
+
+export default async function Page() {
+  const supabase = createServerComponentClient<Database>({ cookies });
+
+  const {
+    data: { session }
+  } = await supabase.auth.getSession();
+
   return (
-    <main className="flex min-h-full flex-col items-center mx-auto text-primary bg-secondary">
-      <div className="container flex flex-col items-center">
-        <h1 className="text-7xl mt-8">Login/Signup</h1>
-      </div>
-    </main>
-  )
+    <Auth session={session} />
+  );
 }
