@@ -14,27 +14,13 @@ export default function Home() {
               </button>
             </Link>
             <Link href="/about">
-              <button className="btn btn-accent btn-wide rounded m-2 break-after-column">
+              <button className="btn btn-info btn-wide rounded m-2 break-after-column">
                 Learn More
               </button>
             </Link>
           </div>
         </div>
       </div>
-      <div className="container mx-auto md:inline-flex text-center">
-            <div className="container mx-auto text-center">
-              <Link href="/auth">
-                <button className="btn btn-info btn-wide rounded m-2">
-                  Info Color
-                </button>
-              </Link>
-              <Link href="/about">
-                <button className="btn btn-warning btn-wide rounded m-2 break-after-column">
-                  Warning Color
-                </button>
-              </Link>
-            </div>
-          </div>
     </main>
   );
 }
