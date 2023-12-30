@@ -26,6 +26,11 @@ Copy the `.env.sample` file to `.env` and fill in your environment variables.
 1. [Install the Supabase CLI](https://supabase.com/docs/guides/cli/getting-started)
 1. Open Docker Desktop
 1. In the repo directory, run `supabase start`
+1. Any time you make schema changes in the database, run
+   ```
+   supabase gen types typescript --local > lib/database.types.ts
+   ```
+1. Add and commit any changes that are made to `lib/database.types.ts`
 
 ### Useful things to know
 
