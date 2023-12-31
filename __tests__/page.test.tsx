@@ -21,7 +21,7 @@ describe("Home page", () => {
     expect(buttons[1]).toHaveTextContent("Learn More")
 
     const links = screen.getAllByRole("link")
-    expect(links[0]).toHaveAttribute("href", "/auth")
+    expect(links[0]).toHaveAttribute("href", "/signup")
     expect(links[1]).toHaveAttribute("href", "/about")
   })
 })

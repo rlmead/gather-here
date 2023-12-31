@@ -1,6 +1,19 @@
 import Link from "next/link";
+import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 
-export default function Home() {
+export default async function Home() {
+  const supabase = createServerComponentClient<Database>({ cookies });
+
+  const {
+    data: { session }
+  } = await supabase.auth.getSession();
+
+  if (session) {
+    redirect("/about")
+  };
+
   return (
     <main className="flex min-h-full flex-col items-center mx-auto text-primary bg-secondary">
       <div className="container flex flex-col content-center">
@@ -8,7 +21,7 @@ export default function Home() {
         <p className="text-2xl text-center p-5">a social network for forming local friendship groups based on shared interests</p>
         <div className="container mx-auto md:inline-flex text-center">
           <div className="container mx-auto text-center">
-            <Link href="/auth">
+            <Link href="/signup">
               <button className="btn btn-success btn-wide rounded m-2">
                 Sign Up
               </button>
