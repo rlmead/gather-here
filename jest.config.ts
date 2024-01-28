@@ -2,8 +2,8 @@ import type { Config } from "jest";
 import nextJest from "next/jest.js";
 
 const createJestConfig = nextJest({
-  dir: './',
-})
+  dir: "./",
+});
 
 const config: Config = {
   // All imported modules in your tests should be mocked automatically
