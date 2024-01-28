@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ThemeSwitcher } from "./navbar-theme-switcher";
+import NavbarUserWidget from "./navbar-user-widget";
 
 export default function Navbar() {
   return (
@@ -12,7 +13,7 @@ export default function Navbar() {
       <div className="flex-none">
         <ul className="menu menu-horizontal bg-secondary px-1">
           <li>
-            <Link href="/auth">Sign In</Link>
+            <NavbarUserWidget />
           </li>
           <li>
             <details>

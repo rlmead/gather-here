@@ -1,11 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
       backgroundImage: {
@@ -31,7 +27,7 @@ const config: Config = {
           info: "#9E0059",
           success: "#FFBD00",
           warning: "#FF0054",
-          error: "#000000",
+          error: "#ff6f70",
         },
         dark: {
           primary: "#FFFFFF",
@@ -42,7 +38,7 @@ const config: Config = {
           info: "#9E0059",
           success: "#FFBD00",
           warning: "#FF0054",
-          error: "#000000",
+          error: "#ff6f70",
         },
       },
     ],

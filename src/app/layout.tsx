@@ -16,7 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={atkinson_hyperlegible.className}>
+      <body
+        className={atkinson_hyperlegible.className}
+        suppressHydrationWarning
+      >
         <Providers>{children}</Providers>
       </body>
     </html>
