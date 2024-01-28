@@ -1,9 +1,9 @@
 export default function Page() {
   return (
-    <main className="flex min-h-full flex-col items-center mx-auto text-primary bg-secondary">
+    <main className="mx-auto flex min-h-full flex-col items-center bg-secondary text-primary">
       <div className="container flex flex-col items-center">
-        <h1 className="text-7xl mt-8">Login/Signup</h1>
+        <h1 className="mt-8 text-7xl">Login/Signup</h1>
       </div>
     </main>
-  )
+  );
 }
