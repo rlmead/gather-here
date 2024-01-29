@@ -19,10 +19,10 @@ const config: Config = {
     },
   },
   daisyui: {
-    darkTheme: "customDark",
+    darkTheme: "dark",
     themes: [
       {
-        customLight: {
+        light: {
           primary: "#390099",
           secondary: "#FFFFFF",
           accent: "#FF5400",
@@ -33,7 +33,7 @@ const config: Config = {
           warning: "#FF0054",
           error: "#000000",
         },
-        customDark: {
+        dark: {
           primary: "#FFFFFF",
           secondary: "#390099",
           accent: "#FF5400",

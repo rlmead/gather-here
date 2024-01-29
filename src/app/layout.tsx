@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { atkinson_hyperlegible } from "./ui/fonts";
 import "./ui/globals.css";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "gather here.",
@@ -14,8 +15,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={atkinson_hyperlegible.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={atkinson_hyperlegible.className}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
