@@ -27,7 +27,7 @@ export async function middleware(req: NextRequest) {
   try {
     isInMaintenanceMode =
       // Don't show the maintenance page in development
-      process.env.NODE_ENV !== "development" &&
+      process.env.VERCEL_ENV === "production" &&
       // Check Edge Config to see if the maintenance page should be shown
       ((await get("isInMaintenanceMode")) ?? false);
   } catch (e) {
