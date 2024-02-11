@@ -1,4 +1,4 @@
-name: "generate-types"
+name: Generate Database Types
 on:
   pull_request:
   workflow_dispatch:
