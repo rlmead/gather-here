@@ -1,9 +1,9 @@
 export default function Page() {
   return (
-    <main className="flex min-h-full flex-col items-center mx-auto text-primary bg-secondary">
+    <main className="mx-auto flex min-h-full flex-col items-center bg-secondary text-primary">
       <div className="container flex flex-col items-center">
-        <h1 className="text-7xl mt-16">Under Maintenance</h1>
-        <p className="text-2xl text-center p-5">
+        <h1 className="mt-16 text-7xl">Under Maintenance</h1>
+        <p className="p-5 text-center text-2xl">
           The website is currently under maintenance. Please check back later.
         </p>
       </div>

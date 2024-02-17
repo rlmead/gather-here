@@ -1,0 +1,23 @@
+name: Testing
+on:
+  pull_request:
+    branches:
+      - dev
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install dependencies
+        run: npm install
+      - name: Run type checks
+        run: npm run typecheck
+      - name: Run tests
+        run: npm run test
+      - name: Run linter
+        run: npm run lint

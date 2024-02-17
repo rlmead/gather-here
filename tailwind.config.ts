@@ -15,35 +15,35 @@ const config: Config = {
       },
     },
     container: {
-      center: true
-    }
+      center: true,
+    },
   },
   daisyui: {
-    darkTheme: "customDark",
+    darkTheme: "dark",
     themes: [
       {
-        customLight: {
-          "primary": "#390099",
-          "secondary": "#FFFFFF",
-          "accent": "#FF5400",
-          "neutral": "#FFFFFF",
+        light: {
+          primary: "#390099",
+          secondary: "#FFFFFF",
+          accent: "#FF5400",
+          neutral: "#FFFFFF",
           "base-100": "#FFFFFF",
-          "info": "#9E0059",
-          "success": "#FFBD00",
-          "warning": "#FF0054",
-          "error": "#000000",
+          info: "#9E0059",
+          success: "#FFBD00",
+          warning: "#FF0054",
+          error: "#000000",
         },
-        customDark: {
-          "primary": "#FFFFFF",
-          "secondary": "#390099",
-          "accent": "#FF5400",
-          "neutral": "#FFFFFF",
+        dark: {
+          primary: "#FFFFFF",
+          secondary: "#390099",
+          accent: "#FF5400",
+          neutral: "#FFFFFF",
           "base-100": "#390099",
-          "info": "#9E0059",
-          "success": "#FFBD00",
-          "warning": "#FF0054",
-          "error": "#000000",
-        }
+          info: "#9E0059",
+          success: "#FFBD00",
+          warning: "#FF0054",
+          error: "#000000",
+        },
       },
     ],
   },
