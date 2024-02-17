@@ -2,13 +2,13 @@ export default function Page() {
   return (
     <div className="prose p-8 md:p-12 lg:p-16">
       <h1>Welcome to Gather Here</h1>
-      <p>The website is currently under construction.</p>
+      <p>This website is currently under construction.</p>
       <h2>Our Goal</h2>
       <p>
         We aim to create an online platform that will match small groups of
         people by their location and their interests, and support them in
         planning Gatherings (In Real Life Meetings) supported and stimulated by
-        material from our Library relevant to their interests.
+        material from our Library that is relevant to their interests.
       </p>
       <p>We want to help people find meaning, structure, and community.</p>
       <h2>Our Dreams</h2>
@@ -46,24 +46,20 @@ export default function Page() {
       </p>
       <p>
         We are currently developing our platform exclusively with volunteers in
-        a number of countries. If you wish to get in contact please use the
-        email below:
-        <ul>
-          <li>
-            Contact -{" "}
-            <a
-              href="mailto:info@gather-here.net"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              info@gather-here.net
-            </a>
-          </li>
-        </ul>
+        a number of countries. If you wish to get in contact please email us at:
+      </p>
+      <p>
+        <a
+          href="mailto:info@gather-here.net"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          info@gather-here.net
+        </a>
       </p>
       <hr />
       <small className="pb-4">
-        Gather Here is a not for profit registered in the UK as a Community
+        Gather Here is a not-for-profit registered in the UK as a Community
         Interest Company 793191
       </small>
     </div>
