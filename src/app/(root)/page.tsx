@@ -11,7 +11,7 @@ export default function Home() {
         </p>
         <div className="container mx-auto text-center md:inline-flex">
           <div className="container mx-auto text-center">
-            <Link href="/auth">
+            <Link href="/auth/login">
               <button className="btn btn-success btn-wide m-2 rounded">
                 Sign Up
               </button>
@@ -26,7 +26,7 @@ export default function Home() {
       </div>
       <div className="container mx-auto text-center md:inline-flex">
         <div className="container mx-auto text-center">
-          <Link href="/auth">
+          <Link href="/auth/login">
             <button className="btn btn-info btn-wide m-2 rounded">
               Info Color
             </button>
