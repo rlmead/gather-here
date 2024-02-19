@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { get } from "@vercel/edge-config";
+import { createServerClient } from "@supabase/ssr";
+import { type CookieSerializeOptions } from "cookie";
 
 export const config = {
   matcher: [
@@ -21,7 +23,7 @@ export const config = {
   ],
 };
 
-export async function middleware(req: NextRequest) {
+export async function middleware(request: NextRequest) {
   let isInMaintenanceMode = false;
 
   try {
@@ -36,7 +38,63 @@ export async function middleware(req: NextRequest) {
   }
 
   if (isInMaintenanceMode) {
-    req.nextUrl.pathname = `/maintenance`;
-    return NextResponse.rewrite(req.nextUrl);
+    request.nextUrl.pathname = `/maintenance`;
+    return NextResponse.rewrite(request.nextUrl);
   }
+
+  let response = NextResponse.next({
+    request: {
+      headers: request.headers,
+    },
+  });
+
+  const supabase = createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        get(name: string) {
+          return request.cookies.get(name)?.value;
+        },
+        set(name: string, value: string, options: CookieSerializeOptions) {
+          request.cookies.set({
+            name,
+            value,
+            ...options,
+          });
+          response = NextResponse.next({
+            request: {
+              headers: request.headers,
+            },
+          });
+          response.cookies.set({
+            name,
+            value,
+            ...options,
+          });
+        },
+        remove(name: string, options: CookieSerializeOptions) {
+          request.cookies.set({
+            name,
+            value: "",
+            ...options,
+          });
+          response = NextResponse.next({
+            request: {
+              headers: request.headers,
+            },
+          });
+          response.cookies.set({
+            name,
+            value: "",
+            ...options,
+          });
+        },
+      },
+    },
+  );
+
+  await supabase.auth.getUser();
+
+  return response;
 }

@@ -16,14 +16,14 @@ describe("Home page", () => {
     );
     expect(paragraph).toBeInTheDocument();
   });
-  it("renders buttons linking to /auth and /about", () => {
+  it("renders buttons linking to /auth/login and /about", () => {
     render(<Page />);
     const buttons = screen.getAllByRole("button");
     expect(buttons[0]).toHaveTextContent("Sign Up");
     expect(buttons[1]).toHaveTextContent("Learn More");
 
     const links = screen.getAllByRole("link");
-    expect(links[0]).toHaveAttribute("href", "/auth");
+    expect(links[0]).toHaveAttribute("href", "/auth/login");
     expect(links[1]).toHaveAttribute("href", "/about");
   });
 });
